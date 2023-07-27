@@ -33,7 +33,7 @@ nav {
 }
 
 nav > .nav-section {
-    padding: 3rem 2rem;
+    padding: 1rem 1rem;
     display: flex;
     gap: 1rem;
     border-left: 1px solid var(--border-color);
@@ -56,8 +56,8 @@ nav > .nav-section {
 }
 
 nav > .nav-section img {
-    width: 50px; /* Set the desired width for the images */
-    height: 50px; /* Set the desired height for the images */
+    width: 40px; /* Set the desired width for the images */
+    height: 40px; /* Set the desired height for the images */
 }
 
 #nav-link-section {
@@ -120,15 +120,19 @@ main > article > .article-image-section {
     cursor: pointer;
 }
 
-.article-nav-section button {
-    padding: 5px;
+.article-nav-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #007bff; /* Customize the button background color as needed */
-    color: #fff; /* Customize the button text color as needed */
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
 }
 
+.nav-button {
+    padding: 10px;
+    margin: 0 10px; /* Add space between the buttons */
+    background-color: transparent;
+    color: #fff; /* Customize the button text color as needed */
+    border: none;
+    cursor: pointer;
+    font-size: 60px; /* Customize the font size as needed */
+    flex-grow: 1; /* Let the buttons take up available horizontal space */
+}
