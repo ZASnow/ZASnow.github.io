@@ -119,3 +119,16 @@ main > article > .article-image-section {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.article-nav-section button {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007bff; /* Customize the button background color as needed */
+    color: #fff; /* Customize the button text color as needed */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
