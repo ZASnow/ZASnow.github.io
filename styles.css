@@ -99,3 +99,23 @@ main > article > .article-image-section {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.article-description-section p {
+    padding: 10px;
+}
+
+.article-title-section h2 {
+    padding-left: 10px;
+}
+
+.article-title-section button {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #007bff; /* Customize the button background color as needed */
+    color: #fff; /* Customize the button text color as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
