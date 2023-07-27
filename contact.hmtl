@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
+    <title>Contact</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
+    <h1>Contact Me</h1>
     <nav>
+        <a href="index.html">Home</a> |
         <a href="work.html">Work</a> |
-        <a href="about.html">About</a> |
-        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
     </nav>
+    <!-- Add your contact details here -->
 </body>
 </html>
