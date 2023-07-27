@@ -56,16 +56,16 @@ nav > .nav-section {
 }
 
 nav > .nav-section img {
-    width: 40px; /* Set the desired width for the images */
-    height: 40px; /* Set the desired height for the images */
+    width: 3vw; /* Set the desired width for the images based on viewport width */
+    height: 3vw; /* Set the desired height for the images based on viewport width */
 }
 
 #nav-link-section {
-    gap : 6rem;
+    gap: 6vw; /* Set the gap based on viewport width */
 }
 
 #nav-social-section {
-    gap: 6rem;
+    gap: 6vw; /* Set the gap based on viewport width */
 }
 
 main {
@@ -100,24 +100,44 @@ main > article > .article-image-section {
     background-repeat: no-repeat;
 }
 
+.article-description-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4vh; /* Adjust the padding based on viewport height */
+    height: 100%; /* Ensure the container takes up the full height */
+}
+
 .article-description-section p {
-    padding: 10px;
+    padding: 2vh; /* Add more padding to the text content based on viewport height */
+    text-align: center; /* Center the text horizontally */
+    font-size: 1.5vw; /* Set the font size based on viewport width */
+    margin: 0; /* Remove default margin */
+}
+
+.article-title-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .article-title-section h2 {
-    padding-left: 10px;
+    font-size: 3vw;
+    margin: 0;
+    margin-left: 3vw; /* adjust the value as needed */
+    padding: 1vh;
 }
 
 .article-title-section button {
-    padding: 5px 10px;
+    padding: 2vh;
+    font-size: 5vw;
     display: flex;
-    align-items: center;
-    gap: 5px;
-    background-color: #007bff; /* Customize the button background color as needed */
-    color: #fff; /* Customize the button text color as needed */
+    gap: 2vw;
+    background-color: transparent;
+    color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    margin-right: 3vw;
 }
 
 .article-nav-section {
@@ -127,12 +147,16 @@ main > article > .article-image-section {
 }
 
 .nav-button {
-    padding: 10px;
-    margin: 0 10px; /* Add space between the buttons */
-    background-color: transparent;
+    padding: 0vw; /* Adjust the padding as needed */
+    background-color: transparent; /* Remove the background color for the button */
     color: #fff; /* Customize the button text color as needed */
     border: none;
     cursor: pointer;
-    font-size: 60px; /* Customize the font size as needed */
-    flex-grow: 1; /* Let the buttons take up available horizontal space */
+    font-size: 5vw; /* Set the desired font size for the icons */
+    margin: 0; /* Remove default margin */
+}
+
+/* Adjust the gap between the buttons using margin */
+.nav-button + .nav-button {
+    margin-left: 10vw; /* Change the gap between the buttons as needed */
 }
