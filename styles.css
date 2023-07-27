@@ -92,3 +92,10 @@ main > article > .article-title-section,
 main > article > .article-nav-section {
     border-top: 1px solid var(--border-color)
 }
+
+main > article > .article-image-section {
+    background-image: url("images/Climbing_BG.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
