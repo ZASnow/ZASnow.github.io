@@ -1,6 +1,7 @@
 :root {
     --background-color: rgb(38, 38, 41);
     --border-color: rgba(255, 255, 255, 0.1);
+    --primary-text-color: rgba(255, 255, 255, .75);
 }
 
 body {
@@ -19,7 +20,7 @@ body {
 h1, h2, h3, a, p, span {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
-    color: white;
+    color: var(--primary-text-color);
 }
 
 a {
@@ -55,9 +56,12 @@ nav > .nav-section {
     justify-content: flex-start;
 }
 
-nav > .nav-section img {
-    width: 3vw; /* Set the desired width for the images based on viewport width */
-    height: 3vw; /* Set the desired height for the images based on viewport width */
+nav > .nav-section i {
+    font-size: 2.5vw;
+}
+
+nav > .nav-section i:hover {
+    color: #5f5f5f;
 }
 
 #nav-link-section {
@@ -91,15 +95,11 @@ main > article:first-child > .article-image-section {
 }
   
 main > article:nth-child(2) > .article-image-section {
-    background-image: url("images/Climbing_BG.jpg");
+    background-image: url("images/Sloppy_Hull.png");
 }
   
 main > article:nth-child(3) > .article-image-section {
-    background-image: url("images/Climbing_BG.jpg");
-}
-  
-main > article:nth-child(4) > .article-image-section {
-    background-image: url("images/Climbing_BG.jpg");
+    background-image: url("images/Example_STFT.png");
 }
 
 main > article > .article-image-section {
@@ -161,6 +161,7 @@ main > article > .article-nav-section {
     text-align: center; /* Center the text horizontally */
     font-size: 1.5vw; /* Set the font size based on viewport width */
     margin: 0; /* Remove default margin */
+    color: rgba(255, 255, 255, .6);
 }
 
 .article-title-section {
@@ -170,7 +171,7 @@ main > article > .article-nav-section {
 }
 
 .article-title-section h2 {
-    font-size: 3vw;
+    font-size: 4vw;
     margin: 0;
     margin-left: 3vw; /* adjust the value as needed */
     padding: 1vh;
@@ -182,7 +183,7 @@ main > article > .article-nav-section {
     display: flex;
     gap: 2vw;
     background-color: transparent;
-    color: #fff;
+    color: var(--primary-text-color);
     border: none;
     cursor: pointer;
     margin-right: 3vw;
@@ -208,7 +209,7 @@ main > article > .article-nav-section {
 .nav-button {
     padding: 0;
     background-color: transparent;
-    color: #fff;
+    color: var(--primary-text-color);
     border: none;
     cursor: pointer;
     font-size: 5vw;
