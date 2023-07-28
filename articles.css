@@ -1,0 +1,120 @@
+:root {
+  --background-color: rgb(38, 38, 41);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --primary-text-color: rgba(255, 255, 255, .75);
+  --article-text-color: rgba(0,0,0, .8);
+}
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0px;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, a, p, span {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: var(--primary-text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  background-color: var(--background-color);
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+}
+
+nav > .nav-section {
+  padding: 1rem 1rem;
+  display: flex;
+  gap: 1rem;
+  border-left: 1px solid var(--border-color);
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-logo-section,
+#nav-link-section {
+  flex-basis: calc(100% / 3)
+}
+
+#nav-social-section,
+#nav-contact-section {
+  flex-grow: 1;
+}
+
+#nav-logo-section {
+  justify-content: flex-start;
+}
+
+nav > .nav-section i {
+  font-size: 2.5vw;
+}
+
+nav > .nav-section i:hover {
+  color: #5f5f5f;
+}
+
+#nav-link-section {
+  gap: 6vw; /* Set the gap based on viewport width */
+}
+
+#nav-social-section {
+  gap: 6vw; /* Set the gap based on viewport width */
+}
+
+nav {
+  /* Your existing nav styles */
+  position: fixed;
+  width: 100%;
+}
+
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  overflow-y: auto;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align the content at the top of the container */
+  padding: 2vw;
+  margin-top: 60px; /* Add a top margin equal to the height of your header */
+}
+
+.scrollable-card {
+  background-color: var(--primary-text-color);
+  border-radius: .8vw;
+  box-shadow: 0 .4vw .8vw rgba(0, 0, 0, 0.1);
+  padding: 1vw;
+  width: 40%; /* Card takes up 40% of the page width */
+}
+
+h2 {
+  font-size: 2vw;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 0;
+  color: var(--article-text-color);
+}
+
+p {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.3vw;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--article-text-color);
+}
+

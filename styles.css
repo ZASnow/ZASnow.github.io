@@ -232,7 +232,6 @@ main > article > .article-nav-section {
     transform: translateX(2vw);
 }
 
-
 nav > .nav-section,
 main > article > .article-section {
     transition: background-color .35s ease;
