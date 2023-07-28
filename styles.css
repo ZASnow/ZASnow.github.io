@@ -70,13 +70,68 @@ nav > .nav-section img {
 
 main {
     flex-grow: 1;
+    position: relative;
+    overflow: hidden;
 }
 
 main > article {
-    display: grid;
     height: 100%;
+    width: 100%;
+    display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 2fr 1fr;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: transform 400ms ease;
+}
+
+main > article:first-child > .article-image-section {
+    background-image: url("images/Climbing_BG.jpg");
+}
+  
+main > article:nth-child(2) > .article-image-section {
+    background-image: url("images/Climbing_BG.jpg");
+}
+  
+main > article:nth-child(3) > .article-image-section {
+    background-image: url("images/Climbing_BG.jpg");
+}
+  
+main > article:nth-child(4) > .article-image-section {
+    background-image: url("images/Climbing_BG.jpg");
+}
+
+main > article > .article-image-section {
+    background-position: center;
+    background-size: cover;
+}
+
+main > article[data-status="inactive"] {
+    transform: translateX(-100%);
+    transition: none;
+}
+
+main > article[data-status="active"] {
+    transform: translateX(0%);
+}
+  
+main > article[data-status="before"] {
+    transform: translateX(-100%);
+}
+  
+main > article[data-status="after"] {
+    transform: translateX(100%);
+}
+  
+main > article[data-status="becoming-active-from-before"] {
+    transform: translateX(-100%);
+    transition: none;
+}
+  
+main > article[data-status="becoming-active-from-after"] {
+    transform: translateX(100%);
+    transition: none;
 }
 
 main > article > .article-section {
@@ -91,13 +146,6 @@ main > article > .article-nav-section {
 main > article > .article-title-section,
 main > article > .article-nav-section {
     border-top: 1px solid var(--border-color)
-}
-
-main > article > .article-image-section {
-    background-image: url("images/Climbing_BG.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .article-description-section {
@@ -138,6 +186,11 @@ main > article > .article-image-section {
     border: none;
     cursor: pointer;
     margin-right: 3vw;
+    transition: transform 0.2s ease;
+}
+
+.article-title-section button:hover {
+    transform: scale(1.25);
 }
 
 .article-nav-section {
@@ -146,24 +199,42 @@ main > article > .article-image-section {
     justify-content: center;
 }
 
+.nav-button-wrapper {
+    padding: 0;
+    margin: 0; /* Remove default margin */
+    position: relative; /* Add position relative for containing the button */
+}
+
 .nav-button {
-    padding: 0vw; /* Adjust the padding as needed */
-    background-color: transparent; /* Remove the background color for the button */
-    color: #fff; /* Customize the button text color as needed */
+    padding: 0;
+    background-color: transparent;
+    color: #fff;
     border: none;
     cursor: pointer;
-    font-size: 5vw; /* Set the desired font size for the icons */
-    margin: 0; /* Remove default margin */
+    font-size: 5vw;
+    margin: 0;
+    transition: transform 0.2s ease;
 }
 
 /* Adjust the gap between the buttons using margin */
-.nav-button + .nav-button {
+.nav-button-wrapper + .nav-button-wrapper {
     margin-left: 10vw; /* Change the gap between the buttons as needed */
 }
 
+/* Move the left chevron to the left on hover */
+.nav-button-wrapper[data-direction="left"]:hover .nav-button {
+    transform: translateX(-2vw);
+}
+
+/* Move the right chevron to the right on hover */
+.nav-button-wrapper[data-direction="right"]:hover .nav-button {
+    transform: translateX(2vw);
+}
+
+
 nav > .nav-section,
 main > article > .article-section {
-    transition: background-color 0.5s ease;
+    transition: background-color .35s ease;
 }
 
 nav > .nav-section:hover,
