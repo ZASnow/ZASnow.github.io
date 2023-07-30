@@ -1,7 +1,7 @@
 :root {
   --background-color: rgb(38, 38, 41);
   --border-color: rgba(255, 255, 255, 0.1);
-  --primary-text-color: rgba(255, 255, 255, .75);
+  --primary-text-color: rgba(255, 255, 255, .85);
   --article-text-color: rgba(0,0,0, .8);
 }
 
@@ -75,39 +75,86 @@ nav > .nav-section i:hover {
   gap: 6vw; /* Set the gap based on viewport width */
 }
 
+body {
+  /* Set the background image */
+  background-image: url('images/Climbing_BG.jpg');
+  /* Set the background attachment to fixed */
+  background-attachment: fixed;
+  /* Set the background size to cover */
+  background-size: cover;
+  /* Set the background position */
+  background-position: center center;
+  /* Your existing body styles */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100vh;
+  margin: 0;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* This will make the main container take up all available space */
+}
+
 nav {
-  /* Your existing nav styles */
-  position: fixed;
+  flex-shrink: 0; /* This will prevent the nav from shrinking */
   width: 100%;
 }
 
-body {
-  background-color: var(--background-color);
-  margin: 0;
-  overflow-y: auto;
+.cards {
+  flex-grow: 1; /* This will make the cards container take up all remaining space */
+  overflow: auto; /* This will allow the cards container to scroll */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-container {
   display: flex;
   justify-content: center;
   align-items: flex-start; /* Align the content at the top of the container */
-  padding: 2vw;
-  margin-top: 60px; /* Add a top margin equal to the height of your header */
+  padding: 1vw;
+  width: 40%;
 }
 
 .scrollable-card {
   background-color: var(--primary-text-color);
   border-radius: .8vw;
-  box-shadow: 0 .4vw .8vw rgba(0, 0, 0, 0.1);
+  box-shadow: 0 .4vw .8vw rgba(0, 0, 0, 0.8);
   padding: 1vw;
-  width: 40%; /* Card takes up 40% of the page width */
+}
+
+.scrollable-card img {
+  width: 100%; /* This will make the image fill the width of the card */
+  height: auto; /* This will maintain the image's aspect ratio */
+  border-radius: .8vw; /* This will round the corners of the image */
+  object-fit: cover; /* This will make sure the image covers the entire area of the card */
+  border: .15vw solid black;
+}
+
+h1 {
+  font-size: 3vw;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 0vw;
+  color: var(--article-text-color);
 }
 
 h2 {
   font-size: 2vw;
   font-weight: 800;
-  text-transform: uppercase;
   margin-top: 0;
+  margin-bottom: -1vw;
+  color: var(--article-text-color);
+}
+
+h3 {
+  font-size: 1.5vw;
+  font-weight: 790;
+  margin-top: 0;
+  margin-bottom: -1vw;
   color: var(--article-text-color);
 }
 
