@@ -1,8 +1,10 @@
 :root {
   --background-color: rgb(38, 38, 41);
   --border-color: rgba(255, 255, 255, 0.1);
+  --primary-card-color: rgba(255, 255, 255, .9);
   --primary-text-color: rgba(255, 255, 255, .85);
   --article-text-color: rgba(0,0,0, .8);
+  --subt-color: rgba(0,0,0,.6)
 }
 
 body {
@@ -19,7 +21,7 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2, h3, a, p, span {
+h1, h2, h3, a, p, span, .subt {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   color: var(--primary-text-color);
@@ -120,7 +122,7 @@ nav {
 }
 
 .scrollable-card {
-  background-color: var(--primary-text-color);
+  background-color: var(--primary-card-color);
   border-radius: .8vw;
   box-shadow: 0 .4vw .8vw rgba(0, 0, 0, 0.8);
   padding: 1vw;
@@ -131,7 +133,9 @@ nav {
   height: auto; /* This will maintain the image's aspect ratio */
   border-radius: .8vw; /* This will round the corners of the image */
   object-fit: cover; /* This will make sure the image covers the entire area of the card */
-  border: .15vw solid black;
+  border: .15vw solid rgba(0,0,0, .5);
+  opacity: .95;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -140,6 +144,14 @@ h1 {
   margin-top: 0;
   margin-bottom: 0vw;
   color: var(--article-text-color);
+}
+
+.subt {
+  font-size: 1.5vw;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: -1vw;
+  color: var(--subt-color);
 }
 
 h2 {

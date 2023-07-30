@@ -83,7 +83,7 @@ main > article {
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 3.5fr 1fr;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -95,11 +95,11 @@ main > article:first-child > .article-image-section {
 }
   
 main > article:nth-child(2) > .article-image-section {
-    background-image: url("images/Sloppy_Hull.png");
+    background-image: url("images/Example_STFT.png");
 }
   
 main > article:nth-child(3) > .article-image-section {
-    background-image: url("images/Example_STFT.png");
+    background-image: url("images/Sloppy_Hull.png");
 }
 
 main > article > .article-image-section {
