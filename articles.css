@@ -178,3 +178,7 @@ p {
   color: var(--article-text-color);
 }
 
+#nav-link-section a:hover,
+#nav-contact-section a:hover {
+  color: #5f5f5f;
+}
